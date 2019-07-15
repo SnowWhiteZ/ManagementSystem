@@ -1,0 +1,109 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+                                     initial-scale=1.0, 
+                                     maximum-scale=1.0, 
+                                     user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>任务展示</title>
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/taskDetails.css" rel="stylesheet">
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+    <script type="text/javascript" src='js/bootstrap.min.js'></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/showtask.js"></script>
+    <script src="js/zjc.js"></script>
+    <!-- <script type="text/javascript" src="js/wangEditor.min.js"></script> -->
+    <script type="text/javascript" src="js/taskDetails.js"></script>
+    <script type="text/javascript" src="js/urllist.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/zjc.js"></script>
+    <script type="text/javascript" src="js/userInfo.js"></script>
+    <script type="text/javascript" src="js/projectTeam.js"></script>
+
+    <!--  timeselector  -->
+    <link href="js/timetool/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/timetool/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/timetool/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+    <script src="js/timetool/js/moment.min.js"></script>
+    <!--  timeselector  -->
+
+</head>
+<body style="background: #F4F7ED;">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="" style="margin-left:50px;">任务管理系统</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 50px;">
+                <li><a href="project.html">项目</a></li>
+                <li><a href="userInfo.html">我的</a></li>
+                <li><a href="sign_in.html">退出</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container" style="background-color: white;border-radius: 4px;border-color: #E3E3E3;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.12);min-height: 800px;">
+
+    <!-- 任务具体展示部分start -->
+    <div id="taskShow">
+        <span style="font-size:18px" id="taskName">前端开发</span>&nbsp;&nbsp;&nbsp;
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" id="taskChange0">刘伟乐</button>
+            <button type="button" class="btn btn-primary" id="taskChange1">周日</button>
+        </div>
+        <button type="button" id="taskStatusBtn"></button>
+        <!-- 任务责任人和完成时间重新更改逻辑start -->
+        <div id="taskChange">
+            <!-- 任务指派人start -->
+            <form role="form">
+                <div class="form-group">
+                    <label for="name">将任务指派给</label>
+                    <select class="form-control" id="projectTeam">
+                    </select>
+                </div>
+            </form><!-- 任务指派人end -->
+            
+            <!-- 任务截止时间start -->
+            <label for="endTime">任务截止时间</label>
+                <div class="input-group date form_date1" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input1" data-link-format="yyyymmdd">
+                    <input class="form-control" size="16" type="text" value="" id="start">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                <input type="hidden" id="dtp_input1" value="" /><br/><!-- 任务截止时间start -->
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-primary" id="taskChange2">保存</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-default" id="taskChange3">取消</button>
+        </div><!-- 任务责任人和完成时间重新更改逻辑end -->
+
+        <!-- 任务描述start -->
+        <div id="taskDesp">
+            <h6 id="taskDespTitle" style="font-size: 15px">任务描述</h6>
+            <p id="taskDespContent" style="font-size: 15px">暂无描述，进入编辑页面进行编辑</p>
+        </div><!-- 任务描述start -->
+
+    </div><!-- 任务具体展示部分end -->
+
+    <!-- 侧边栏的编辑删除项目 -->
+    <div class="detail-actions">
+        <div class="item">
+            <a class="detail-action detail-action-edit" href="updateTask.html">编辑</a>
+        </div>
+        <div class="item" data-visible-to="creator,admin">
+            <a class="detail-action detail-action-del" id="deleteTask" style="color: red">删除</a>
+        </div>
+    </div>
+
+</div>
+<div class="footer" style="text-align: center;margin-top: 10px;color:#777;">
+    @copyright
+
+</div>
+</body>
+</html>

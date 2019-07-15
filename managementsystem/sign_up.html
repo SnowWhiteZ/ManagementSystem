@@ -1,0 +1,92 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>注册</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body style="background: #F4F7ED;">
+<script>
+    window.onload = function(){
+
+        $("#register").click(function(event){
+            userName=$("#username").val(),
+            userPassword=$("#password").val(),
+            userPasswordConfirm = $("#password2").val(),
+            userRole = $("#userrole").val();
+            if(userPassword!=userPasswordConfirm)
+            {
+                alert("密码两次不一致！")
+            }
+            else{
+                $.ajax({
+                    url:'http://localhost:8000/signUpByNameAndPasswordAndRole',
+                    type:'POST',
+                    dataType:'json',
+                    async: false,
+                    data:{
+                        "userName":userName,
+                        "userPassword":userPassword,
+                        "userRole":userRole,
+                    },
+                    success:function(data){
+                        console.log(data);
+                        if (data==0){
+                            alert("恭喜您已注册成功！");
+                            window.location.replace("sign_in.html");//should be located:project.html
+                        }else if(data==2){
+                            alert("用户名重复，请重新输入！");
+                        }else{
+                            alert("请输入正确的用户名与密码！");
+                        }
+                    }
+                    // error:function (returnValue) {
+                    //     alert("对不起！数据加载失败！");
+                    // },
+                });
+            }
+        })
+
+    }
+
+</script>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" style="margin-left:50px;">任务管理系统</a>
+        </div>
+    </div>
+</nav>
+<div class="container" style="background-color: white;border-radius: 4px;
+border-color: #E3E3E3;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.12);min-height: 800px;">
+    
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+
+            <form class="form-signin">
+                <h2 class="form-signin-heading">注册学生信息管理系统</h2>
+                <label for="">用户名</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="请输入用户名" required autofocus><br>
+                <label for="">密码</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="请输入密码" required><br>
+                <label for="">重复密码</label>
+                <input type="password" name="password2" id="password2" class="form-control" placeholder="请再次输入密码" required maxLength="16"><br>
+                <label for="">身份</label>
+                <select name="userrole" id = "userrole" class="form-control">
+                    <option value='0' selected="selected" >学生</option>
+                    <option value='1'>教师</option>
+                </select><br>
+                <button type="button" class="btn btn-primary" id="register">注册</button>
+                <a href="sign_in.html" class="btn btn-default" >返回登录</a>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

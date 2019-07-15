@@ -1,0 +1,138 @@
+<!--
+1.大家button使用bootstrap中的.btn-primary，尽量使用bootstrap中的控件。
+2.涉及到颜色的时候尽量为了样式统一，用  #337ab7
+3.大家都在<div class= "container"></div>开发8~~
+
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的项目</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/style5.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src='js/time.js'></script> -->
+    <script type="text/javascript" src="js/showtask.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/urllist.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/zjc.js"></script>
+    <script type="text/javascript" src="js/userInfo.js"></script>
+    <script type="text/javascript" src="js/projectTeam.js"></script>
+
+    <!--  timeselector  -->
+    <link href="js/timetool/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/timetool/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/timetool/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+    <script src="js/timetool/js/moment.min.js"></script>
+    <script src="js/showtask.js"></script>
+    <script type="text/javascript" src="js/taskDetails.js"></script>
+
+    <!--  timeselector  -->
+    
+
+
+
+</head>
+
+<body style="background: #F4F7ED;">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="" style="margin-left:50px;">任务管理系统</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="margin-right: 50px;">
+                    <li><a href="project.html">项目</a></li>
+                    <li><a href="userInfo.html">我的</a></li>
+                    <li><a href="sign_in.html">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="background-color: white;border-radius: 4px;
+    border-color: #E3E3E3;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.12);min-height: 800px;">
+        <!--页面初始化，获取项目名称和项目描述-->
+        <div  class="project-header" >
+            <div class="project-header-info" id="header">
+                <span class="project-name" id="projectName"></span>
+                <br>
+                <span class="project-desc" id="projectDespContent"></span>
+            </div>
+            <div class="nav navbar-nav navbar-right"  style="margin-right: 50px;display:block;font-size: 20px;font-weight: bold;text-align:center;padding-top: 20px;">
+
+                <a id="projectTeamNumber">
+                    <ul id="memberNumber">
+                    </ul>
+                    <ul>
+                        <p>成员</p>
+                    </ul>
+                </a>
+
+
+            </div>
+        </div>
+        <!--所有任务和添加任务button-->
+        <div class="task-groups">
+            <a class="alltask"  href="javascript:;">所有任务</a>
+            <a class="newtask" href="createTask.html" >添加任务</a>
+        </div>
+        <!--任务列表-->
+        <div class="task-list-view">
+
+
+            <ul class="taskname" style="list-style-type:none; padding-inline-start: 0;" >
+
+
+            </ul>
+
+
+        </div>
+        <!--删除项目-->
+        <!-- 按钮触发模态框 -->
+        <div class="nav navbar-nav navbar-right" id="deleteButton">
+            <button class="btn btn-danger btn-lg"  data-toggle="modal" data-target="#myModal">
+                删除项目
+            </button>
+        </div>
+
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true">×
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel" style="text-align: center;letter-spacing: 5px">
+                            确定删除项目吗
+                        </h4>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                        <button type="button"  id="deleteProject" class="btn btn-danger">
+                            删除
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+
+
+
+    </div>
+
+    <div class="footer" style="text-align: center;margin-top: 10px;color:#777;">
+        @copyright
+
+    </div>
+</body>
+</html>

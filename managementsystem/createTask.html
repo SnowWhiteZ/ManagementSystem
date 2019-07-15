@@ -1,0 +1,118 @@
+<!--
+1.大家button使用bootstrap中的.btn-primary，尽量使用bootstrap中的控件。
+2.涉及到颜色的时候尽量为了样式统一，用  #337ab7
+3.大家都在<div class= "container"></div>开发8~~
+
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>添加任务</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="css/style5.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src='js/time.js'></script>
+    <script type="text/javascript" src="js/showtask.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/urllist.js"></script>
+    <script type="text/javascript" src="js/zjc.js"></script>
+    <script type="text/javascript" src="js/userInfo.js"></script>
+    <script type="text/javascript" src="js/projectTeam.js"></script>
+    <script type="text/javascript" src="js/taskDetails.js"></script>
+
+    <!--  timeselector  -->
+    <link href="js/timetool/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/timetool/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/timetool/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+    <script src="js/timetool/js/moment.min.js"></script>
+
+    <!--  timeselector  -->
+
+
+
+
+
+</head>
+<body style="background: #F4F7ED;">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="" style="margin-left:50px;">任务管理系统</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="margin-right: 50px;">
+                    <li><a href="project.html">项目</a></li>
+                    <li><a href="userInfo.html">我的</a></li>
+                    <li><a href="sign_in.html">退出</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="background-color: white;border-radius: 4px;
+    border-color: #E3E3E3;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.12);min-height: 800px;">
+
+
+        <p class="page-title" >添加任务</p>
+
+
+        <form method="post" action="" id="myform">
+            <input type="text" name="task_name" id="task_name" required="required" placeholder="任务名称" maxlength="50" style="margin-left: 50px">
+
+            <div class="taskchange" id="taskChange" >
+                <!-- 任务指派人start -->
+                <form role="form">
+                    <div class="form-group">
+                        <label for="name">将任务指派给</label>
+                        <select class="form-control" id="projectTeam">
+                            <!--<option>寇英帅</option>
+                            <option>刘伟乐</option>
+                            <option>白嘉萌</option>
+                            <option>大黄</option>
+                            <option>冯文英</option>
+                            <option>张佳程</option>-->
+                        </select>
+                    </div>
+                </form><!-- 任务指派人end -->
+                <!--任务开始时间-->
+                <label for="startTime">任务开始时间</label>
+                <div class="input-group date form_date1" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input1" data-link-format="yyyymmdd">
+                    <input class="form-control" size="16" type="text" value="" id="start1">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                <input type="hidden" id="dtp_input1" value="" /><br/><!--任务开始时间end-->
+
+                <!-- 任务截止时间start -->
+                <label for="endTime">任务截止时间</label>
+                <div class="input-group date form_date2" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyymmdd">
+                    <input class="form-control" size="16" type="text" value="" id="start2">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                <input type="hidden" id="dtp_input2" value="" /><br/><!-- 任务截止时间end -->
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-primary" id="createTask">添加</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-default" id="nocreateTask">取消</button>
+
+            </div><!-- 任务责任人和完成时间重新更改逻辑end -->
+
+
+            <br />
+            <br />
+            <br />
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <!--<button  type="submit" class="btn btn-primary" id="btn-create-task" style="margin-left: 5px">添加任务</button>-->
+        </form>
+    </div>
+
+    <div class="footer" style="text-align: center;margin-top: 10px;color:#777;">
+        @copyright
+
+    </div>
+</body>
+</html>

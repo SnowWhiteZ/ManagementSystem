@@ -1,0 +1,176 @@
+
+    div.project-groups{
+        display: block;
+        margin: 30px 30px;
+        width: 100%;}
+
+    .allprojects{
+        display: inline-block;
+        background-color: #337ab7;
+        color:#fff;
+        pointer-events: none;
+        margin: 0 4px 10px 0;
+        max-width: 100px;
+        min-width: 20px;
+        padding: 0 12px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 20px;
+        vertical-align: middle;
+        user-select: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;}
+
+    .newproject{
+        display: inline-block;
+        padding: 0 10px;
+        margin-right: 5px;
+        line-height: 36px;
+        border-left: 1px solid #cccccc;
+        vertical-align: top;}
+
+    .projects-list-view{
+        display: block;
+        padding: 10px 30px 51px;
+        position: relative;
+        width: 100%;
+        float:left;}
+
+    .project-name-view{
+    padding: 15px 0;
+    color: #000;
+    display: block;
+    position: relative;
+    border-top: 1px solid #E3E3E3;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 130%;}
+
+    .page-title{
+        display: block;
+        margin-top: 40px;
+        margin-left: 30px;
+        font-size: 25px;
+        font-weight: 550;
+        line-height: 1.25;}
+
+    #projectName{
+        display: block;
+        width: 554px;
+        height: 42px;
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 40px;
+        margin-left: 30px;
+        padding: 8px 12px;
+        border: 1px solid #cccccc;
+        outline: 0;
+        border-radius: 5px;
+        box-shadow: none;
+        overflow: auto;}
+
+    #projectDesp{
+        display: block;
+        margin-left: 30px;
+        margin-top: 5px;
+        padding: 8px 12px;
+        width: 554;
+        height: 68;
+        font-size: 15px;
+        outline: 0;
+        border:1px solid #cccccc;
+        border-radius: 5px;
+        line-height: 1.5;
+        box-shadow: none;
+        overflow: auto;
+        resize:none;}
+
+    .project_member_title{
+        display: block;
+        margin-top: 30px;
+        margin-left: 30px;
+        font-size: 15px;
+        font-weight: 100;
+        line-height: 1.25;}
+
+    .projectTeam{
+        display: inline-block;
+        margin:15px 0 15px 42px;
+        width: 330px;
+        border: none;
+        line-height: 1.2;
+        padding: 2px 0;
+        color: #000;
+        display: block;
+        position: relative;
+        border-bottom: 1px dashed #E3E3E3;
+        background-color: #fff;
+        font-size: 17px;
+        overflow: hidden;
+        border-radius: 0;   
+        outline: 0;}
+    
+    .tabs-header{
+        margin: 20px 0 20px 30px;
+        font-size:16px;
+        border-bottom: 2px solid #e3e3e3;
+        width: 45%;}
+    
+    .tab-header-active{
+        padding: 8px 25px 4px 25px;
+        border-bottom: 2px solid transparent;
+        color: #337ab7;
+        border-color: #337ab7;
+        text-decoration: none;}
+
+    .tab-header {
+        padding: 8px 25px 4px 25px;
+        border-bottom: 2px solid transparent;
+        color: #777777;}
+
+    .project-member-view{
+            padding: 5px 0;
+            color: #000;
+            display: block;
+            position: relative;
+            cursor: pointer;
+            background-color: #fff;}
+
+    .invite_member{
+            display: inline-block;
+            margin:15px 0 15px 30px;
+            width: 330px;
+            border: none;
+            line-height: 1.2;
+            padding: 2px 0;
+            color: #000;
+            display: block;
+            position: relative;
+            border-bottom: 1px dashed #E3E3E3;
+            background-color: #fff;
+            font-size: 17px;
+            overflow: hidden;
+            border-radius: 0;   
+            outline: 0;}
+
+    .panelGroup{
+        width:554px;
+        margin-top:20px;
+        margin-left: 30px;}
+    
+    .btn-danger { 
+    color: #FFFFFF; 
+    background-color: #BD1B1B; 
+    border-color: #BD1B1B;} 
+
+    .btn-danger:hover, 
+    .btn-danger:focus, 
+    .btn-danger:active, 
+    .btn-danger.active, 
+    .open .dropdown-toggle.btn-danger { 
+    color: #FFFFFF; 
+    background-color: #0B498C !important; 
+    border-color: #0b498c;}     
+
+       

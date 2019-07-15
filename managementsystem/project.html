@@ -1,0 +1,60 @@
+<!--
+1.大家button使用bootstrap中的.btn-primary，尽量使用bootstrap中的控件。
+2.涉及到颜色的时候尽量为了样式统一，用  #337ab7
+3.大家都在<div class= "container"></div>开发8~~
+
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的项目</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/zjc.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/zjc.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/urllist.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    
+</head>
+
+<body style="background: #F4F7ED;">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="" style="margin-left:50px;">任务管理系统</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 50px;">
+                <li><a href="project.html">项目</a></li>
+                <li><a href="userInfo.html">我的</a></li>
+                <li><a href="sign_in.html">退出</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container" style="background-color: white;border-radius: 4px;
+border-color: #E3E3E3;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.12);min-height: 800px;">
+
+<div class="project-groups">
+<a class="allprojects"  href="javascript:;">所有项目</a>
+<a class="newproject"  href="projectCreate.html" >新建项目</a>
+</div>
+
+<div class="projects-list-view">
+<ul class="projectNameList" style="list-style-type:none; padding-inline-start: 0;" ></ul>
+</div>
+
+</div>
+
+<div class="footer" style="text-align: center;margin-top: 10px;color:#777;">
+    @copyright
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!-- 页面10：项目成员展示 + 链接到项目成员编辑 
+Author: 冯文英
+Date: 2018/10/09
+-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>任务管理系统</title>
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/userInfo_projectTeam.css" />
+
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/zjc.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/urllist.js"></script>
+    <script type="text/javascript" src="js/userInfo.js"></script>
+    <script type="text/javascript" src="js/projectTeam.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+
+<body style="background: #F4F7ED;">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="" style="margin-left:50px;">任务管理系统</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="margin-right: 50px;">
+                    <li><a href="project.html">项目</a></li>
+                    <li><a href="userInfo.html">我的</a></li>
+                    <li><a href="sign_in.html">退出</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="background-color: white;border-radius: 4px;border-color: #E3E3E3;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.12);min-height: 800px;">
+
+        <!-- 限制整个范围 -->
+        <div class="col-md-10  col-md-offset-1">
+            <div class="page-inner" data-page-name="项目成员" id="page-project-members">
+                
+                <!-- 标头 -->
+                <h3 class="page-title">
+                    <span>项目成员</span>
+                    <a id="updateProjectTeam" href="projectTeamUpdate.html" class="link-edit-members" data-visible-to="admin">编辑</a>
+                    <a id="goback" href="projectDetails.html" class="link-edit-members" data-visible-to="admin">回到项目</a>
+                </h3>
+
+                <!-- 成员列表 -->
+                <div class="project-members">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" style="text-align: center;margin-top: 10px;color:#777;">
+        @copyright
+    </div>
+
+</body>
+</html>

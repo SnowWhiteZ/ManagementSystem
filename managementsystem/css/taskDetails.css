@@ -1,0 +1,30 @@
+/*任务展示样式*/
+#taskshow {
+	margin-top: 50px;
+	margin-left: 50px;
+    position: relative;
+}
+
+/*任务拥有者、截止时间修改弹出框*/
+#taskChange{
+    float: right;
+    position: relative;
+    display: none; 
+    margin-top:50px;
+    width: 200px;
+    right: 60%;
+    z-index: 1;
+}
+
+/*侧面编辑删除菜单样式*/
+.detail-actions .item {
+	float: right;
+	clear: both;
+	width: 100px;
+	top: 100px;
+	padding: 5px 10px;
+	margin-right: 1px;
+	background-color: #fff;
+	border-bottom: 1px solid #E3E3E3;
+	transition: width 0.3s, box-shadow 0.3s ease-in-out;
+}

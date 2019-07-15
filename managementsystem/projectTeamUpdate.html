@@ -1,0 +1,73 @@
+<!--
+1.大家button使用bootstrap中的.btn-primary，尽量使用bootstrap中的控件。
+2.涉及到颜色的时候尽量为了样式统一，用  #337ab7
+3.大家都在<div class= "container"></div>开发8~~
+
+-->
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>管理项目成员</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/zjc.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/zjc.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/urllist.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body style="background: #F4F7ED;">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="" style="margin-left:50px;">任务管理系统</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 50px;">
+                <li><a href="project.html">项目</a></li>
+                <li><a href="userInfo.html">我的</a></li>
+                <li><a href="sign_in.html">退出</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container" style="background-color: white;border-radius: 4px;border-color: #E3E3E3;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.12);min-height: 800px;">
+
+<p class="projectName" style="color: #777; font-size: 18px; margin-left:30px; margin-top:15px;"></p>
+<hr />
+<p style="font-size: 26px; margin-left: 30px; ">项目成员</p>
+<br />
+<h4 style="margin-left: 30px;">选择项目成员</h4>
+<p style="margin-left: 30px;">管理员可以邀请和移除项目成员，只有被邀请的团队成员才能访问该项目信息。</p>
+
+
+<ul class="nav nav-tabs" style="margin-left:30px; margin-top:20px; width: 61.8%">
+    <li class="active"> <a data-toggle="tab" href="#home">团队成员</a></li>
+    <li><a data-toggle="tab" href="#menu1">其他信息</a></li>
+</ul>
+
+
+<div class="tab-content" style="margin-left:30px;">
+    <div id="home" class="tab-pane fade in active" style="margin-top:10px;">
+        <div class="btn-group1" data-toggle="buttons" style="width:61.8%"></div>  
+        <div class="btn-group2" data-toggle="buttons" style="border-top: 3px solid#E3E3E3; margin-top:10px; padding-top:10px;width:63.5%"></div>   
+        <button  id="btn-save-members" class="btn btn-primary" 
+        data-disable-with="正在保存..." style="margin: 20px 5px;">保存项目成员</button>
+    </div>
+    <div id="menu1" class="tab-pane fade" style="margin-top:20px;">
+    </div>
+    <br>
+</div>
+</div>
+
+
+<div class="footer" style="text-align: center;margin-top: 10px;color:#777;">
+    @copyright
+</div>
+</body>
+</html>
